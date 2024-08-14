@@ -1,97 +1,171 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta name="viewport" content="width=device-width" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>WordPress &#8250; ReadMe</title>
-	<link rel="stylesheet" href="wp-admin/css/install.css?ver=20100228" type="text/css" />
-</head>
-<body>
-<h1 id="logo">
-	<a href="https://wordpress.org/"><img alt="WordPress" src="wp-admin/images/wordpress-logo.png" /></a>
-</h1>
-<p style="text-align: center">Semantic Personal Publishing Platform</p>
 
-<h2>First Things First</h2>
-<p>Welcome. WordPress is a very special project to me. Every developer and contributor adds something unique to the mix, and together we create something beautiful that I am proud to be a part of. Thousands of hours have gone into WordPress, and we are dedicated to making it better every day. Thank you for making it part of your world.</p>
-<p style="text-align: right">&#8212; Matt Mullenweg</p>
+# Installation
 
-<h2>Installation: Famous 5-minute install</h2>
-<ol>
-	<li>Unzip the package in an empty directory and upload everything.</li>
-	<li>Open <span class="file"><a href="wp-admin/install.php">wp-admin/install.php</a></span> in your browser. It will take you through the process to set up a <code>wp-config.php</code> file with your database connection details.
-		<ol>
-			<li>If for some reason this does not work, do not worry. It may not work on all web hosts. Open up <code>wp-config-sample.php</code> with a text editor like WordPad or similar and fill in your database connection details.</li>
-			<li>Save the file as <code>wp-config.php</code> and upload it.</li>
-			<li>Open <span class="file"><a href="wp-admin/install.php">wp-admin/install.php</a></span> in your browser.</li>
-		</ol>
-	</li>
-	<li>Once the configuration file is set up, the installer will set up the tables needed for your site. If there is an error, double check your <code>wp-config.php</code> file, and try again. If it fails again, please go to the <a href="https://wordpress.org/support/forums/">WordPress support forums</a> with as much data as you can gather.</li>
-	<li><strong>If you did not enter a password, note the password given to you.</strong> If you did not provide a username, it will be <code>admin</code>.</li>
-	<li>The installer should then send you to the <a href="wp-login.php">login page</a>. Sign in with the username and password you chose during the installation. If a password was generated for you, you can then click on &#8220;Profile&#8221; to change the password.</li>
-</ol>
+## Local Install Directions
 
-<h2>Updating</h2>
-<h3>Using the Automatic Updater</h3>
-<ol>
-	<li>Open <span class="file"><a href="wp-admin/update-core.php">wp-admin/update-core.php</a></span> in your browser and follow the instructions.</li>
-	<li>You wanted more, perhaps? That&#8217;s it!</li>
-</ol>
+### Pull down environment
+Use Local (localwp.com) to connect to WPEngine and pull down the project environment.
 
-<h3>Updating Manually</h3>
-<ol>
-	<li>Before you update anything, make sure you have backup copies of any files you may have modified such as <code>index.php</code>.</li>
-	<li>Delete your old WordPress files, saving ones you&#8217;ve modified.</li>
-	<li>Upload the new files.</li>
-	<li>Point your browser to <span class="file"><a href="wp-admin/upgrade.php">/wp-admin/upgrade.php</a>.</span></li>
-</ol>
+## For WPEngine projects with an existing repo
+Once you have pulled down with Local, `git clone` the WPEngine project's repo and `git checkout` the same environment as the one you pulled down in Local - if you pulled down dev, checkout the dev branch. If you pull down production, you'll checkout main/master.
 
-<h2>Migrating from other systems</h2>
-<p>WordPress can <a href="https://developer.wordpress.org/advanced-administration/wordpress/import/">import from a number of systems</a>. First you need to get WordPress installed and working as described above, before using <a href="wp-admin/import.php">our import tools</a>.</p>
+Then take the `.git` folder from your cloned repo and copy it and `.gitignore` to the `public/` directory of the Local project directory.
 
-<h2>System Requirements</h2>
-<ul>
-	<li><a href="https://www.php.net/">PHP</a> version <strong>7.2.24</strong> or greater.</li>
-	<li><a href="https://www.mysql.com/">MySQL</a> version <strong>5.5.5</strong> or greater.</li>
-</ul>
+Now you have your local set up with the git repo. Check `git status` to make sure you see the expected result.
 
-<h3>Recommendations</h3>
-<ul>
-	<li><a href="https://www.php.net/">PHP</a> version <strong>7.4</strong> or greater.</li>
-	<li><a href="https://www.mysql.com/">MySQL</a> version <strong>8.0</strong> or greater OR <a href="https://mariadb.org/">MariaDB</a> version <strong>10.5</strong> or greater.</li>
-	<li>The <a href="https://httpd.apache.org/docs/2.2/mod/mod_rewrite.html">mod_rewrite</a> Apache module.</li>
-	<li><a href="https://wordpress.org/news/2016/12/moving-toward-ssl/">HTTPS</a> support.</li>
-	<li>A link to <a href="https://wordpress.org/">wordpress.org</a> on your site.</li>
-</ul>
 
-<h2>Online Resources</h2>
-<p>If you have any questions that are not addressed in this document, please take advantage of WordPress&#8217; numerous online resources:</p>
-<dl>
-	<dt><a href="https://wordpress.org/documentation/">HelpHub</a></dt>
-		<dd>HelpHub is the encyclopedia of all things WordPress. It is the most comprehensive source of information for WordPress available.</dd>
-	<dt><a href="https://wordpress.org/news/">The WordPress Blog</a></dt>
-		<dd>This is where you&#8217;ll find the latest updates and news related to WordPress. Recent WordPress news appears in your administrative dashboard by default.</dd>
-	<dt><a href="https://planet.wordpress.org/">WordPress Planet</a></dt>
-		<dd>The WordPress Planet is a news aggregator that brings together posts from WordPress blogs around the web.</dd>
-	<dt><a href="https://wordpress.org/support/forums/">WordPress Support Forums</a></dt>
-		<dd>If you&#8217;ve looked everywhere and still cannot find an answer, the support forums are very active and have a large community ready to help. To help them help you be sure to use a descriptive thread title and describe your question in as much detail as possible.</dd>
-	<dt><a href="https://make.wordpress.org/support/handbook/appendix/other-support-locations/introduction-to-irc/">WordPress <abbr>IRC</abbr> (Internet Relay Chat) Channel</a></dt>
-		<dd>There is an online chat channel that is used for discussion among people who use WordPress and occasionally support topics. The above wiki page should point you in the right direction. (<a href="https://web.libera.chat/#wordpress">irc.libera.chat #wordpress</a>)</dd>
-</dl>
+## For WPEngine projects that need a new repo
+Once you have pulled down with Local, navigate to the `public/` directory. 
 
-<h2>Final Notes</h2>
-<ul>
-	<li>If you have any suggestions, ideas, or comments, or if you (gasp!) found a bug, join us in the <a href="https://wordpress.org/support/forums/">Support Forums</a>.</li>
-	<li>WordPress has a robust plugin <abbr>API</abbr> (Application Programming Interface) that makes extending the code easy. If you are a developer interested in utilizing this, see the <a href="https://developer.wordpress.org/plugins/">Plugin Developer Handbook</a>. You shouldn&#8217;t modify any of the core code.</li>
-</ul>
 
-<h2>Share the Love</h2>
-<p>WordPress has no multi-million dollar marketing campaign or celebrity sponsors, but we do have something even better&#8212;you. If you enjoy WordPress please consider telling a friend, setting it up for someone less knowledgeable than yourself, or writing the author of a media article that overlooks us.</p>
 
-<p>WordPress is the official continuation of <a href="https://cafelog.com/">b2/caf&#233;log</a>, which came from Michel V. The work has been continued by the <a href="https://wordpress.org/about/">WordPress developers</a>. If you would like to support WordPress, please consider <a href="https://wordpress.org/donate/">donating</a>.</p>
 
-<h2>License</h2>
-<p>WordPress is free software, and is released under the terms of the <abbr>GPL</abbr> (GNU General Public License) version 2 or (at your option) any later version. See <a href="license.txt">license.txt</a>.</p>
+### Create new repo in Github
+In Github, create a new repository
+- Name the repo
+- Set it to public or private
+- Set it to not add a Readme or .gitignore
 
-</body>
-</html>
+It will give you a list of commands to run, but we will only be running some. Do not close this page.
+
+All the following commands should be run in your `public/` directory:
+- Start with `git init` (initialize the repo).
+- At this point check `git status` and/or `git status -u`  to make sure all the files we are going to track are what we want.
+- When sure, run `git add .` to add all the files to the index to be committed.
+- Run `git commit -m 'initial commit'`
+- Run the git remote add origin command that we have from when we created a new repo.
+  - It should look like: `git remote add origin git@github.com:username/new-project.git`
+- Rename the branch to match your current environment
+  - If you are on the production branch, run `git branch -M main`
+  - If you are on the staging branch, run `git branch -M staging`
+  - If you are on the dev branch, run `git branch -M dev`
+- Push
+  - If you are on the production branch, run `git push -u origin main`
+  - If you are on the staging branch, run `git push -u origin staging`
+  - If you are on the dev branch, run `git push -u origin dev`
+
+Your repo is now set up!
+
+## Add starter theme files
+### .gitignore
+Add a `.gitignore` file to the `public/` directory. You should just copy the one that is in the main directory of the starter theme repo.
+If you already have one, you may want to merge the two files
+
+### .prettierignore
+Add a `.prettierignore` file to the `public/` directory. You should just copy the one that is in the main directory of the starter theme repo.
+If you already have one, you may want to merge the two files
+
+### Add theme folders
+In the starter theme repo, there are 2 theme folders in `/wp-content/themes`.
+Copy both the parent and child themes to your `/wp-content/themes` repo
+
+### Add actions
+Copy the `.github` folder from the starter theme to the `public/` directory of your project.
+IMPORTANT: In _each_ yml file, change the `WPE_ENV` value to match the WPEngine environment.
+
+### Activate child theme
+In the dashboard, under Appearance -> Themes, activate the FP Starter Child theme
+
+## Local development
+Optional: Run `composer install` from the parent theme's root folder to install any composer dependencies - if any.
+Running `npm run watch` will monitor the child theme for updates while you develop. This function will also check to make sure the build/node_modules folders exist in the parent and child themes. If anything is not, then it will reinstall/rebuild. This function will compile SCSS, TS, JS, and even PHP. Our PHP enqueuing process is tied to Laravel Mix.
+
+You may need to restart the watch command if you change the webpack.mix.js file or add anything to /acfblocks
+
+## Things to know
+
+The text domain for the parent theme is `fpst`
+The text domain for the child theme is `fpstc`
+
+It is common to need to change the child theme text domain for your new site so just find and replace `fpstc`
+
+# FP Starter Theme updates (PARENT)
+
+For parent theme updates done through the CMS, this means going to the dashboard to update the version of the parent theme, any node changes will not be ran. So it's best to update the theme version in the dashboard first. Then we need to trigger a GH compile action, so either make any change to the repo or force an action deploy in GH to trigger a compile.
+
+Not recommended, but in case you do.., any code updates to the parent theme on your local need to be recompiled in the parent folder using `npx mix --production`. Normally we compile the child theme regularly, not the parent theme.
+
+## Common errors during Github Actions
+
+If you see a 'function already declared' error for something you put in the fp-starter-child/src/functions folder, this is probably due to a file/folder structure change that is leaving duplicate files on the server. Simply log in through ssh/sftp and delete the content in the fp-starter-child/src/functions folder, then run GH Actions deploy again and that should fix that until we find a better solution.
+
+
+## Code Formatting
+
+Install the Prettier extension for VS Code
+Go to Settings->Settings and search for Format on Save to autoformat when you save a file
+It will automatically use the .prettierrc configuation file
+
+### VSCODE
+
+package.json includes a php formatter compatible with prettier. Add the following to your settings.json file:
+
+```
+"editor.formatOnSave": true,
+  "prettier.documentSelectors": [
+    "**/*.{js,jsx,ts,tsx,vue,html,css,scss,less,json,md,mdx,graphql,yaml,yml,php}"
+  ]
+```
+
+Note that the patterns/ folder is set to be ignored by Prettier because it causes extra new lines with the WP block code
+
+## Third-party integrations
+
+### Github Actions
+
+Issue - When moving file locations or renaming files, only the new file appears on the server, the old file remains. To remedy this, 2 files : `build/fpst/existing-php-functions.json` and `build/fpstc/existing-php-functions.json` are created by webpack in the parent and child themes during compile. This makes it so only the files in the repo are included.
+For example, if you create a file `themes/fp-starter-child/functions/badanalytics/analytics.php` and commit it to the repo, then it will appear on the server. If you remove that file from your repo, it will still remain on the server. This means we can't just enqueue every PHP file in `/functions/` because old files that were deleted from the repo could still exist. Using `existing-php-functions.json` to decide which files should be enqueued will make sure that the only files we are enqueing are the ones that exist in the repo.
+
+
+## Page Building
+
+At the core of our website creation process lies the Gutenberg blocks. These blocks serve as the elemental units, allowing us to craft cohesive and structured web pages. Examples of core blocks which we have customized include Paragraph, Header, and Image. Custom blocks also will be created for more advanced elements such as search bars, search results, image carousel, and post display.
+
+Our approach centers around predefined patterns, each a carefully curated assembly of these blocks. Every webpage starts by integrating a pre-designed pattern into the Gutenberg editor.
+
+## Block Patterns
+
+Block Patterns are predefined block layouts, available from the patterns tab of the block inserter. Once inserted into content, the blocks are ready for additional or modified content and configuration. [Docs](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-patterns/)
+
+We want block patterns to be an essential part of the page-building process. In this site, any row will be considered a pattern. Patterns may contain just a single block or often multiple blocks.
+
+When building a page, the process should always begin by dragging a pre-defined pattern into the Gutenberg editor. To ensure consistency, if a pattern doesn't exist for the section/row, the pattern should be created before being added to a page.
+
+### Patterns - Build process
+
+The core principle when crafting patterns is ensuring the adaptability of individual blocks while providing a ready-to-use framework. A pattern should allow for easy adjustment of block elements to suit specific requirements. It streamlines the process, requiring only the deletion of unnecessary items and necessary adjustments to settings.
+
+Any section or row diverging significantly from an existing pattern warrants the creation of a new pattern. This holds true even if it's a singular occurrence across the entire website. However, when constructing a new section that bears resemblance to an existing pattern, augmenting the existing pattern with additional blocks is acceptable. Yet, it's crucial to anticipate the potential removal of these blocks during implementation while ensuring the layout remains visually cohesive.
+
+#### Example:
+
+Section A containing:
+
+- Title (Heading, Font size XXL)
+- Subtitle (Paragraph, lowercase)
+- Image (Aspect ratio 1:1)
+- Button (Secondary)
+
+Section B containing:
+
+- Title (Heading, Font size XL)
+- Subtitle
+- Image (Aspect ratio 2:1)
+
+Section C containing:
+
+- Supertitle (Paragraph, Uppercase)
+- Title (Heading)
+- Paragraph
+- Button (Primary)
+
+All three of the above sections could be built using a pattern consisting of the following blocks:
+
+- Supertitle (Paragraph, Uppercase)
+- Title (Heading)
+- Subtitle (Paragraph)
+- Image
+- Paragraph (Paragraph)
+- Button
+
+To create the layout of section B, you could add the the pattern described above, then remove the Subtitle and Image blocks. Then ensure the remaining blocks have the settings and content that match the design. The pattern should have been built in a way that removing items leaves the margins/padding in a way that the spacing will look good no matter which items are removed.
