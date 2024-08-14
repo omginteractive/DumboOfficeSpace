@@ -1,0 +1,11 @@
+.mb-pattern-display {
+  .mb-pattern_display__item {
+    padding-block: 30px;
+    .title {
+      margin-bottom: 8px;
+    }
+  }
+  .mb-pattern_display__block {
+    transform: scale(0.7);
+  }
+}

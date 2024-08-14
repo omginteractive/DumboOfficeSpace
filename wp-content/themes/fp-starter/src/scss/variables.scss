@@ -1,0 +1,5 @@
+/* IMPORTANT: Try to keep this file to a minimum size until we can figure out how to give patterns access to
+these variables without repeating them for every pattern */
+
+$adminbar_height: 32px;
+$mobile_adminbar_height: 46px; //(max-width: 782px)

@@ -1,0 +1,15 @@
+{
+  "name": "acf/pattern-display",
+  "title": "Pattern Display",
+  "description": "Displays registered patterns",
+  "category": "posts",
+  "icon": "admin-comments",
+  "keywords": ["pattern"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "pattern_display.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

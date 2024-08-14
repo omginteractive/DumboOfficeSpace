@@ -1,0 +1,49 @@
+/* Button Width Styles */
+.wp-block-button {
+  .wp-element-button {
+    width: 100%;
+  }
+  &.custom-width-dynamic {
+    width: fit-content;
+  }
+  &.custom-width-medium {
+    width: 50px; // TODO: Shehan, what do you want this value to be? Figma only has one button size.
+    box-sizing: border-box;
+  }
+  &.custom-width-large {
+    width: 100px; // TODO: Shehan, what do you want this value to be? Figma only has one button size.
+    box-sizing: border-box;
+  }
+  &.custom-width-full {
+    width: 100%;
+  }
+}
+:is(.wp-block-button, .editor-styles-wrapper.wp-block-button) {
+  /* Button Type Styles */
+  &.custom-type-primary {
+    .wp-element-button {
+      background-color: #000;
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
+  &.custom-type-secondary {
+    .wp-element-button {
+      background-color: #fff;
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+  &.custom-type-tertiary {
+    .wp-element-button {
+      background-color: #000;
+      color: #fff;
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+}

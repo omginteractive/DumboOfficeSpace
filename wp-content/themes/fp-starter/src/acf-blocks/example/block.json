@@ -1,0 +1,14 @@
+{
+  "name": "acf/example",
+  "title": "Example",
+  "description": "A custom example block that uses ACF fields.",
+  "style": ["file:../../../build/acf-blocks/example.css"],
+  "viewScript": ["example-js"],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["example", "quote"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "example.php"
+  }
+}

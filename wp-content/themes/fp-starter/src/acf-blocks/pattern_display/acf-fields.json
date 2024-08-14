@@ -1,0 +1,46 @@
+[
+  {
+    "key": "group_65625d6434b2f",
+    "title": "Pattern Display Block",
+    "fields": [
+      {
+        "key": "field_65625d64108d6",
+        "label": "Pattern Categories",
+        "name": "pattern_categories",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "Comma separated category slugs. Example: mcwb-content,mcwb-search",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "block",
+          "operator": "==",
+          "value": "acf/pattern-display"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0
+  }
+]

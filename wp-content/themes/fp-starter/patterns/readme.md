@@ -1,0 +1,1 @@
+See child theme documentation

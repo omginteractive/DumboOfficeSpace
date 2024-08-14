@@ -1,0 +1,36 @@
+/* Important: If theme.json maxWidth is updated, this file needs to be updated as well */
+/*
+  "maxWidth": {
+    "xxs": "300px",
+    "xs": "350px",
+    "sm": "400px",
+    "md": "450px",
+    "lg": "500px",
+    "xl": "550px",
+    "xxl": "750px"
+  }
+*/
+
+.wp-block-group:not(.alignfull) {
+  &.custom-max-width-xxs {
+    max-width: 300px;
+  }
+  &.custom-max-width-xs {
+    max-width: 350px;
+  }
+  &.custom-max-width-sm {
+    max-width: 400px;
+  }
+  &.custom-max-width-md {
+    max-width: 450px;
+  }
+  &.custom-max-width-lg {
+    max-width: 500px;
+  }
+  &.custom-max-width-xl {
+    max-width: 550px;
+  }
+  &.custom-max-width-xxl {
+    max-width: 750px;
+  }
+}
